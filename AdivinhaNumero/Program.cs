@@ -30,8 +30,8 @@ public class Program
         }
 
         Console.WriteLine($"Você tem {tentativasMaximas} tentativas para adivinhar o número. Boa sorte!");
-        
-        while(tentativas < tentativasMaximas && !acertou)
+
+        while (tentativas < tentativasMaximas && !acertou)
         {
             Console.Write("Digite seu palpite: ");
             int palpite = int.Parse(Console.ReadLine());
@@ -51,5 +51,7 @@ public class Program
                 Console.WriteLine($"Parabéns! Você adivinhou o número {numeroSecreto} em {tentativas} tentativas.");
             }
         }
+
+        Console.WriteLine(acertou ? "Você venceu!" : $"Você perdeu! O número era {numeroSecreto}.");
     }
 }
